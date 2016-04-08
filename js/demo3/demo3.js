@@ -4,7 +4,7 @@ var snake = {
 	keys: {'37': {x: -1, y: 0}, '38': {x: 0, y: -1}, '39': {x: 1, y: 0}, '40': {x: 0, y: 1}},
 	snakeCurrent: {x: 1, y: 0},
 	currentPoint: 0,
-	timer: 500,
+	timer: 400,
 	isChange: true,
 	init: function(){
 		// this.widthCount = $('#action-width').val();

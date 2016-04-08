@@ -90,6 +90,8 @@ var snake = {
 				_this.snakePoint.push(_this.currentPoint);
 				if(_this.timer>100){
 					_this.timer-=20;
+					clearInterval(_this.setI);
+					_this.beginTimer();
 				}
 				_this.drawSnake();
 				_this.timerShow();

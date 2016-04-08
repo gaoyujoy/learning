@@ -10,8 +10,9 @@
     <link rel="icon" href="">
 
     <title>Learning Demo</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/demo2/demo2.css">
 </head>
 
 <body>
@@ -34,9 +35,9 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="../threejs/demo1.html">threejs-demo1 <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">threejs-demo2</a></li>
-                <li><a href="#">Analytics</a></li>
+                <li><a href="demo1.html">threejs-demo1</a></li>
+                <li class="active"><a href="demo2.html">slider-demo2</a></li>
+                <li><a href="demo3.html">snake-demo3</a></li>
                 <li><a href="#">Export</a></li>
             </ul>
             <ul class="nav nav-sidebar">
@@ -54,14 +55,23 @@
         </div>
     </div>
 </div>
-<div id="WebGL-output"></div>
-<div id="Stats-output"></div>
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/three.js"></script>
-<script src="../js/stats.js"></script>
-<script src="../js/dat.gui.js"></script>
-<script src="../js/dat.gui.js"></script>
-<script src="../js/demo1.js"></script>
+<div class="show-base">
+				<img src="../img/demo2/1.jpg" />
+				<img src="../img/demo2/2.jpg" />
+				<img src="../img/demo2/3.jpg" />
+				<img src="../img/demo2/4.jpg" />
+				<img src="../img/demo2/5.jpg" />
+		</div>
+<script src="../js/jquery/jquery.js"></script>
+<script src="../js/bootstrap/bootstrap.min.js"></script>
+<script src="../js/demo2/demo2.js"></script>
+		<script>
+			new Yudemo({
+				"classname": 'show-base',
+				"width": 500,
+				"height": 300,
+				"timer": 2000
+			});
+		</script>
 </body>
 </html>

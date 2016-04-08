@@ -10,8 +10,9 @@
     <link rel="icon" href="">
 
     <title>Learning Demo</title>
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/demo3/demo3.css">
 </head>
 
 <body>
@@ -34,9 +35,9 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="../demo/demo1.html">threejs-demo1 <span class="sr-only">(current)</span></a></li>
-                <li><a href="../demo/demo2.html">slider-demo2</a></li>
-                <li><a href="#">Analytics</a></li>
+                <li><a href="demo1.html">threejs-demo1</a></li>
+                <li><a href="demo2.html">slider-demo2</a></li>
+                <li class="active"><a href="demo3.html">snake-demo3</a></li>
                 <li><a href="#">Export</a></li>
             </ul>
             <ul class="nav nav-sidebar">
@@ -54,7 +55,16 @@
         </div>
     </div>
 </div>
-<script src="js/jquery/jquery.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
+<canvas id="canvas" width="400px" height="400px">
+    No Canvas
+</canvas>
+<!-- <div class="show-action">
+    width:<input type="text" id="action-width" value="20" />
+    height:<input type="text" id="action-height" value="20" />
+    <button id="action-begin">开始</button>
+</div> -->
+<script src="../js/jquery/jquery.js"></script>
+<script src="../js/bootstrap/bootstrap.min.js"></script>
+<script src="../js/demo3/demo3.js"></script>
 </body>
 </html>

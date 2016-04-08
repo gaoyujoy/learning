@@ -1,0 +1,20 @@
+.show-base{
+	/*border: 1px solid black;*/
+	display: none;
+	margin-left: 220px;
+	margin-top: 20px;
+}
+.show-star{
+	width: 10px;
+	height: 10px;
+	background-color: transparent;
+	border: 1px solid black;
+	display: inline-block;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 0px 5px 0px 5px;
+}
+.show-star-index{
+	background-color: white;
+	opacity: 0.5;
+}

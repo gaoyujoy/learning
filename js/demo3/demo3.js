@@ -149,7 +149,7 @@ var snake = {
 				_this.isChange= false;
 			}
 			
-		};
+		}; 
 	}
 };
 snake.init();

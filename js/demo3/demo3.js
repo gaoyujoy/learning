@@ -15,7 +15,7 @@ var snake = {
 		this.canvas.style.height = this.heightCount*20;
 		this.context = this.canvas.getContext('2d');
 		this.binds();
-		this.drawCanvas();
+		// this.drawCanvas();
 		this.drawSnake();
 		this.beginTimer();
 		this.timerShow();
@@ -73,8 +73,8 @@ var snake = {
 			var y = (Math.floor(point%_this.widthCount) == 0 ? Math.floor(point/_this.widthCount) : Math.floor(point/_this.widthCount+1))
 			_this.context.fillRect((x-1)*20, (y-1)*20, 20,20);
 		});
-		_this.drawX();
-		_this.drawY();
+		// _this.drawX();
+		// _this.drawY();
 		_this.isChange = true;
 	},
 	beginTimer: function(){

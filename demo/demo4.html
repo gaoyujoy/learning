@@ -60,6 +60,7 @@
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() { 
             // 分享到朋友圈 
             WeixinJSBridge.on('menu:share:timeline', function(argv){ 
+                alert('1111');
                 shareTimeline(); 
             });
              // 发送给好友

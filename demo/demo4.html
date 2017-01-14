@@ -15,23 +15,22 @@
             img_height = 323,
             link = window.location.href
         function shareTimeline() {
-            alert(JSON.stringify(WeixinJSBridge));
-            WeixinJSBridge.invoke('shareTimeline',{ 
-                "link": link,
-                "title": title,
-                "img_url": img_url,
-                "img_width": img_width,
-                "img_height": img_height
-            }, function(res) {
-                alert(JSON.stringify(res));
-            }); 
+            if(WeixinJSBridge){
+                WeixinJSBridge.invoke('shareTimeline',{ 
+                    "link": link,
+                    "title": title,
+                    "img_url": img_url,
+                    "img_width": img_width,
+                    "img_height": img_height
+                }, function(res) {
+                }); 
+            }
         }
         function shareWeibo() {
             WeixinJSBridge.invoke('shareWeibo',{
                 "content": title,
                 "url": link,
             }, function(res) {
-                to_share_back(JSON.stringify(res));
             });
         }
         function shareFriend() {
@@ -42,26 +41,12 @@
                 "link": link,
                 "title": title
             }, function(res) {
-                to_share_back(JSON.stringify(res));
             })
-        }
-        function to_share_back(msg){
-            if(msg.indexOf('cancel')>=0){
-                return false;
-            }
-            $.ajax({ 
-                type: 'POST',
-                url: '/wechat/qa/setshare',
-                dataType: 'JSON'
-            }).done(function (data) { 
-                console.log('分享成功');
-            });
         }
         // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。 
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() { 
             // 分享到朋友圈 
-            WeixinJSBridge.on('menu:share:timeline', function(argv){ 
-                alert('1111');
+            WeixinJSBridge.on('menu:share:timeline', function(argv){
                 shareTimeline(); 
             });
              // 发送给好友

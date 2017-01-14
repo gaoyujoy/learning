@@ -14,7 +14,8 @@
             img_width = 330,
             img_height = 323,
             link = window.location.href
-        function shareTimeline() { 
+        function shareTimeline() {
+            alert(WeixinJSBridge);
             WeixinJSBridge.invoke('shareTimeline',{ 
                 "link": link,
                 "title": title,

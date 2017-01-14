@@ -15,7 +15,7 @@
             img_height = 323,
             link = window.location.href
         function shareTimeline() {
-            if(WeixinJSBridge){
+            //if(WeixinJSBridge){
                 WeixinJSBridge.invoke('shareTimeline',{ 
                     "link": link,
                     "title": title,
@@ -24,7 +24,7 @@
                     "img_height": img_height
                 }, function(res) {
                 }); 
-            }
+            //}
         }
         function shareWeibo() {
             WeixinJSBridge.invoke('shareWeibo',{
